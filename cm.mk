@@ -1,24 +1,35 @@
-# Boot animation
-TARGET_SCREEN_WIDTH := 720
-TARGET_SCREEN_HEIGHT := 1280
+# Copyright (C) 2015 The CyanogenMod Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+$(call inherit-product, device/alcatel/liberty/full_liberty.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/alcatel/liberty/device.mk)
+# Must define platform variant before including any common things
+TARGET_BOARD_PLATFORM_VARIANT := msm8909
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := alcatel
 PRODUCT_NAME := cm_liberty
-PRODUCT_BRAND := Alcatel
-PRODUCT_MODEL := 5054D
-PRODUCT_MANUFACTURER := Alcatel
-PRODUCT_RELEASE_NAME := liberty
-
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="msm8909-user 5.1.1 liberty-L01 C577B040 release-keys" \
-    BUILD_FINGERPRINT="ALCATEL/liberty-L01/HWY560-L:5.1.1/liberty-L01/C577B040:user/release-keys"
+BOARD_VENDOR := alcatel
+PRODUCT_DEVICE := liberty
 
 PRODUCT_GMS_CLIENTID_BASE := android-alcatel
+
+PRODUCT_MANUFACTURER := Alcatel
+
+PRODUCT_BRAND := Alcatel
+TARGET_VENDOR := alcatel
+TARGET_VENDOR_PRODUCT_NAME := 5054D
+TARGET_VENDOR_DEVICE_NAME := liberty
+

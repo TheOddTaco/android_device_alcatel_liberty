@@ -17,8 +17,8 @@
 
 set -e
 
-DEVICE=alcatel
-VENDOR=huawei
+DEVICE=liberty
+VENDOR=alcatel
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -52,6 +52,7 @@ fi
 # Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
+extract "$MY_DIR"/proprietary-files-qc.txt "$SRC"
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh

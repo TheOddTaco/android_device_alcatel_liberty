@@ -13,12 +13,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter liberty,$(TARGET_DEVICE)),)
-
-LOCAL_PATH := $(call my-dir)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
-include $(CLEAR_VARS)
-
-endif
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/full_liberty.mk

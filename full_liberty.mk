@@ -12,13 +12,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-ifneq ($(filter liberty,$(TARGET_DEVICE)),)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-LOCAL_PATH := $(call my-dir)
+# Inherit from liberty device
+$(call inherit-product, device/alcatel/liberty/device.mk)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
-include $(CLEAR_VARS)
-
-endif
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := liberty
+PRODUCT_NAME := full_liberty
+PRODUCT_BRAND := Alcatel
+PRODUCT_MANUFACTURER := Alcatel
