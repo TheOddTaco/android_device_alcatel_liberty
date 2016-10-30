@@ -1,2 +1,2 @@
 # Kernel
-TARGET_KERNEL_CONFIG := pop3_defconfig
+TARGET_KERNEL_CONFIG := m1_mpcs_us_defconfig
