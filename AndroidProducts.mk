@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_liberty.mk
+    $(LOCAL_DIR)/full_m1.mk
