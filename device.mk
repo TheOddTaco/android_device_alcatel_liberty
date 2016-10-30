@@ -15,7 +15,7 @@
 #
 
 # Inherit from msm8909-common
-$(call inherit-product, device/alcatel/msm8909-common/msm8909.mk)
+$(call inherit-product, device/lge/msm8909-common/msm8909.mk)
 
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
@@ -45,4 +45,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-$(call inherit-product-if-exists, vendor/alcatel/liberty/liberty-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/m1/m1-vendor.mk)
