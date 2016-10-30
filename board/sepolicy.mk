@@ -1,3 +1,3 @@
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/alcatel/liberty/sepolicy
+    device/lge/m1/sepolicy
