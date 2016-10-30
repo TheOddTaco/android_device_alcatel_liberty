@@ -1,12 +1,30 @@
 # Recovery
-TARGET_RECOVERY_FSTAB := device/alcatel/liberty/rootdir/etc/fstab.qcom
-#Enable Below Lines For Build TWRP
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TARGET_USERIMAGES_USE_EXT4 := true
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+BOARD_RECOVERY_SWIPE := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+# TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cm
+
+# TWRP
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-PRODUCT_COPY_FILES += device/alcatel/liberty/twrp.fstab:recovery/root/etc/twrp.fstab
-RECOVERY_SDCARD_ON_DATA		:= true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_NO_USB_STORAGE := true
-TW_INCLUDE_CRYPTO := true
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_SDEXT_STORAGE_PATH := "/sd-ext"
+TW_SDEXT_STORAGE_MOUNT_POINT := "sd-ext"
+TW_DEFAULT_EXTERNAL_STORAGE := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_NO_SCREEN_TIMEOUT := true
+
+PRODUCT_COPY_FILES += device/lge/m1/twrp.fstab:recovery/root/etc/twrp.fstab
+
