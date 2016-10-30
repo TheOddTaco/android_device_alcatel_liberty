@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/alcatel/liberty/full_liberty.mk)
+$(call inherit-product, device/lge/m1/full_m1.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -20,16 +20,14 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8909
 
-PRODUCT_NAME := cm_liberty
-BOARD_VENDOR := alcatel
-PRODUCT_DEVICE := liberty
+PRODUCT_NAME := cm_m1
+BOARD_VENDOR := lge
+PRODUCT_DEVICE := m1
 
-PRODUCT_GMS_CLIENTID_BASE := android-alcatel
+PRODUCT_MANUFACTURER := LGE
 
-PRODUCT_MANUFACTURER := Alcatel
-
-PRODUCT_BRAND := Alcatel
-TARGET_VENDOR := alcatel
-TARGET_VENDOR_PRODUCT_NAME := 5054D
-TARGET_VENDOR_DEVICE_NAME := liberty
+PRODUCT_BRAND := LGE
+TARGET_VENDOR := lge
+TARGET_VENDOR_PRODUCT_NAME := LGMS330
+TARGET_VENDOR_DEVICE_NAME := m1
 
