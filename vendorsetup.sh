@@ -1,1 +1,1 @@
-add_lunch_combo cm_liberty-userdebug
+add_lunch_combo cm_m1-userdebug
