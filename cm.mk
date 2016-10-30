@@ -20,14 +20,10 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8909
 
-PRODUCT_NAME := cm_m1
-BOARD_VENDOR := lge
 PRODUCT_DEVICE := m1
-
+PRODUCT_NAME := cm_m1
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LGMS330
 PRODUCT_MANUFACTURER := LGE
-
-PRODUCT_BRAND := LGE
-TARGET_VENDOR := lge
-TARGET_VENDOR_PRODUCT_NAME := LGMS330
-TARGET_VENDOR_DEVICE_NAME := m1
+PRODUCT_RELEASE_NAME := LGMS330
 
