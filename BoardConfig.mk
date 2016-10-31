@@ -15,8 +15,8 @@
 
 include device/alcatel/msm8909-common/BoardConfigCommon.mk
 
-include device/alcatel/liberty/board/*.mk
+include device/lge/m1/board/*.mk
 
 # inherit from the proprietary version
--include vendor/alcatel/liberty/BoardConfigVendor.mk
+-include vendor/lge/m1/BoardConfigVendor.mk
 
