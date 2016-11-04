@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/alcatel/msm8909-common/BoardConfigCommon.mk
+include device/lge/msm8909-common/BoardConfigCommon.mk
 
 include device/lge/m1/board/*.mk
 
